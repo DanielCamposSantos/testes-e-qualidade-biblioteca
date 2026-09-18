@@ -1,6 +1,7 @@
 package io.github.danielcampossantos.domain;
 
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -8,6 +9,7 @@ import java.time.LocalDate;
 
 @Getter
 @ToString
+@EqualsAndHashCode
 public class Livro {
     private final Long id;
     private final String titulo;
