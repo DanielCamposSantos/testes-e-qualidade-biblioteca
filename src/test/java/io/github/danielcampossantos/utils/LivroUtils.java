@@ -1,3 +1,4 @@
+
 package io.github.danielcampossantos.utils;
 
 import io.github.danielcampossantos.domain.Livro;
@@ -6,6 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class LivroUtils {
+
     public List<Livro> criarListaNovaDeLivros() {
         var livro1 = Livro.builder()
                 .id(1L)
@@ -38,5 +40,25 @@ public class LivroUtils {
                 .build();
 
         return List.of(livro1, livro2, livro3);
+    }
+
+    public Livro criarLivro() {
+        return criarListaNovaDeLivros().getFirst();
+    }
+
+    public Livro criarLivroSemId() {
+        return criarLivroComId(null);
+    }
+
+    public Livro criarLivroComId(Long id) {
+        return criarLivro().toBuilder().id(id).build();
+    }
+
+    public Livro criarLivroSemId(Livro livro) {
+        return livro.toBuilder().id(null).build();
+    }
+
+    public Livro criarLivroComTitulo(Livro livro, String titulo) {
+        return livro.toBuilder().titulo(titulo).build();
     }
 }
