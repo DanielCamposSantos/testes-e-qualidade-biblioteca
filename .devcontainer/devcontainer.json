@@ -1,0 +1,22 @@
+
+{
+  "name": "BibliotecaTestes - Java 26",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "26",
+      "jdkDistro": "tem",
+      "installMaven": true,
+      "installGradle": false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test"
+      ]
+    }
+  }
+}
